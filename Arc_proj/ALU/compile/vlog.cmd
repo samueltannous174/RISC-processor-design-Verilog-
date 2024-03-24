@@ -1,0 +1,1 @@
+-o C:/Users/samue/Downloads/Arc_proj/ALU/compile -lc C:/Users/samue/Downloads/Arc_proj/library.cfg -fl C:/Users/samue/Downloads/Arc_proj/ALU/projlib.cfg -pli "C:/Aldec/Active-HDL-13-x64/bin/systf.dll" -epr C:/Users/samue/Downloads/Arc_proj/ALU/compile/ALU.epr -O2 -sve -msg 5 -sv2k12 -work ALU C:/Users/samue/Downloads/Arc_proj/ALU/src/RegistersFile.v 

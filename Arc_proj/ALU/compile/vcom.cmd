@@ -1,0 +1,1 @@
+-w -erf C:/Users/samue/Downloads/Arc_proj/ALU/compile/ALU.erf -d C:/Users/samue/Downloads/Arc_proj/ALU/compile -s C:/Users/samue/Downloads/Arc_proj/library.cfg -j C:/Users/samue/Downloads/Arc_proj/ALU/projlib.cfg -work ALU -O3 -e 100 -work ALU -2002 ./../compile/AllProj.vhd 

@@ -1,0 +1,258 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/alu.v $dsn/src/Extender.v $dsn/src/Data_mem.v $dsn/src/PC.v $dsn/src/RegistersFile.v $dsn/src/before_PC.v $dsn/src/ControlUnit.v $dsn/src/PC_ControlUnit.v $dsn/src/Mux2x1.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module alu found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: ALU alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC Control_Unit PCControlFunction MUX2x1.
+# $root top modules: alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC ControlUnit PCControlFunction mux_2x1 ALU InstructionMemory InstMemory mux2x1 MUX2x1 MUX2x1_4Bits Control_Unit.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+acom -O3 -e 100 -work ALU -2002  $dsn/src/AllProj.bde
+# DRC: Checking file "C:/Users/samue/Downloads/Arc_proj/ALU/src/AllProj.bde".
+# DRC: Warning: AllProj.bde - 0 error(s), 10 warning(s)
+# DRC: DRC process completed in 3 second(s).
+# DRC: The results have been written to the log file. Double click on this line to view the log.
+# Generating C:\Users\samue\Downloads\Arc_proj\ALU\compile\AllProj.vhd from C:\Users\samue\Downloads\Arc_proj\ALU\src\AllProj.bde ...
+# Generation successful
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: ./../compile/AllProj.vhd
+# Compile Entity "AllProj"
+# Compile Architecture "AllProj" of Entity "AllProj"
+# Error: COMP96_0018: AllProj.bde(AllProj.vhd) : (53, 8): Identifier expected.
+# Error: COMP96_0015: AllProj.bde(AllProj.vhd) : (53, 8): ')' expected.
+# Error: COMP96_0015: AllProj.bde(AllProj.vhd) : (53, 8): ';' expected.
+# Error: COMP96_0018: AllProj.bde(AllProj.vhd) : (89, 8): Identifier expected.
+# Error: COMP96_0015: AllProj.bde(AllProj.vhd) : (89, 8): ')' expected.
+# Error: COMP96_0015: AllProj.bde(AllProj.vhd) : (89, 8): ';' expected.
+# Error: COMP96_0018: AllProj.bde(AllProj.vhd) : (198, 8): Identifier expected.
+# Error: COMP96_0015: AllProj.bde(AllProj.vhd) : (198, 12): ';' expected.
+# Error: COMP96_0018: AllProj.bde(AllProj.vhd) : (307, 8): Identifier expected.
+# Error: COMP96_0015: AllProj.bde(AllProj.vhd) : (307, 15): ';' expected.
+# Error: COMP96_0018: AllProj.bde(AllProj.vhd) : (315, 8): Identifier expected.
+# Error: COMP96_0015: AllProj.bde(AllProj.vhd) : (315, 15): ';' expected.
+# Compile failure 12 Errors 0 Warnings  Analysis time :  47.0 [ms]
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/InstMem.v $dsn/src/Mux2x1_4Bits.v $dsn/src/stack_pointer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Warning: VCP2641 InstMem.v : (11, 14): Redundant digits given in number 32'h0000000000000000.
+# Warning: VCP2641 InstMem.v : (13, 14): Redundant digits given in number 32'h0001000000000000.
+# Warning: VCP2641 InstMem.v : (15, 14): Redundant digits given in number 32'h0002000000000000.
+# Warning: VCP2641 InstMem.v : (17, 14): Redundant digits given in number 32'h0003110012340100.
+# Warning: VCP2641 InstMem.v : (19, 14): Redundant digits given in number 32'h0004000200340100.
+# Warning: VCP2641 InstMem.v : (21, 14): Redundant digits given in number 32'h0005010300400100.
+# Warning: VCP2641 InstMem.v : (23, 14): Redundant digits given in number 32'h0006010412340100.
+# Warning: VCP2641 InstMem.v : (25, 14): Redundant digits given in number 32'h0007010500400100.
+# Warning: VCP2641 InstMem.v : (27, 14): Redundant digits given in number 32'h001000060712345001.
+# Warning: VCP2641 InstMem.v : (29, 14): Redundant digits given in number 32'h001001060801234502.
+# Warning: VCP2641 InstMem.v : (31, 15): Redundant digits given in number 32'h001010070901234512.
+# Warning: VCP2641 InstMem.v : (33, 15): Redundant digits given in number 32'h001011081001234523.
+# Warning: VCP2641 InstMem.v : (35, 15): Redundant digits given in number 32'h0011000A00000000.
+# Warning: VCP2641 InstMem.v : (37, 15): Redundant digits given in number 32'h0011010B12345678.
+# Warning: VCP2641 InstMem.v : (39, 15): Redundant digits given in number 32'h0011100C00000000.
+# Warning: VCP2641 InstMem.v : (41, 15): Redundant digits given in number 32'h0011110D00000000.
+# Warning: VCP2641 InstMem.v : (43, 15): Redundant digits given in number 32'h0100000E00000000.
+# Error: VCP5103 stack_pointer.v : (14, 16): Undeclared identifier: MemWr.
+# Error: VCP5103 stack_pointer.v : (14, 26): Undeclared identifier: stackOp.
+# Error: VCP5103 stack_pointer.v : (16, 34): Undeclared identifier: stackOp.
+# Compile failure 3 Errors 17 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/stack_pointer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP5103 stack_pointer.v : (14, 16): Undeclared identifier: MemWr.
+# Error: VCP5103 stack_pointer.v : (14, 26): Undeclared identifier: stackOp.
+# Error: VCP5103 stack_pointer.v : (16, 34): Undeclared identifier: stackOp.
+# Compile failure 3 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/stack_pointer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP5103 stack_pointer.v : (15, 16): Undeclared identifier: MemWr.
+# Error: VCP5103 stack_pointer.v : (15, 26): Undeclared identifier: stackOp.
+# Error: VCP5103 stack_pointer.v : (17, 34): Undeclared identifier: stackOp.
+# Compile failure 3 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/stack_pointer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP5103 stack_pointer.v : (15, 16): Undeclared identifier: MemWr.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/stack_pointer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: StackPointer.
+# $root top modules: alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC ControlUnit PCControlFunction mux_2x1 ALU InstructionMemory InstMemory mux2x1 MUX2x1 MUX2x1_4Bits Control_Unit StackPointer.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/stack_pointer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: StackPointer.
+# $root top modules: alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC ControlUnit PCControlFunction mux_2x1 ALU InstructionMemory InstMemory mux2x1 MUX2x1 MUX2x1_4Bits Control_Unit StackPointer.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/next_instruction.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 next_instruction.v : (3, 14): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 next_instruction.v : (4, 9): Syntax error. Unexpected token: ).
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/next_instruction.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 next_instruction.v : (12, 21): Syntax error. Unexpected token: endmodule[_ENDMODULE].
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/next_instruction.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: next_instruction.
+# $root top modules: alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC ControlUnit PCControlFunction mux_2x1 ALU InstructionMemory InstMemory mux2x1 MUX2x1 MUX2x1_4Bits Control_Unit StackPointer next_instruction.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# AllProj.bde: 9 symbol(s) analyzed.
+# 0 symbol(s) fully converted.
+# 0 symbol(s) partially converted.
+# 9 symbol(s) not converted.
+# The conversion results have been written to the log file. Double click on this line to view the log.
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/mux4x1.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: mux_4x1_32bits.
+# $root top modules: alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC ControlUnit PCControlFunction mux_2x1 ALU InstructionMemory InstMemory mux2x1 MUX2x1 MUX2x1_4Bits Control_Unit StackPointer next_instruction mux_4x1_32bits.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# AllProj.bde: 11 symbol(s) analyzed.
+# 0 symbol(s) fully converted.
+# 0 symbol(s) partially converted.
+# 11 symbol(s) not converted.
+# The conversion results have been written to the log file. Double click on this line to view the log.
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/RegistersFile.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: RegisterFile.
+# $root top modules: alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC ControlUnit PCControlFunction mux_2x1 ALU InstructionMemory InstMemory mux2x1 MUX2x1 MUX2x1_4Bits Control_Unit StackPointer next_instruction mux_4x1_32bits.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# BDE: Updating diagrams...
+# BDE: Updating diagram "C:\Users\samue\Downloads\Arc_proj\ALU\src\AllProj.bde"...
+# BDE: ...No symbols to update found on the diagram.
+# BDE: ...Updating diagrams done.
+# BDE: Getting symbols for update...
+# BDE: Updating symbols...
+# BDE: The "ALU" symbol from the "ALU" library was successfully updated.
+# BDE: The "Before_PC" symbol from the "ALU" library was successfully updated.
+# BDE: The "DataMemory" symbol from the "ALU" library was successfully updated.
+# BDE: The "Extender" symbol from the "ALU" library was successfully updated.
+# BDE: The "InstMemory" symbol from the "ALU" library was successfully updated.
+# BDE: The "ProgramCounter" symbol from the "ALU" library was successfully updated.
+# BDE: The "RegisterFile" symbol from the "ALU" library was successfully updated.
+# BDE: ...Updating symbols done
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/RegistersFile.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: RegisterFile.
+# $root top modules: alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC ControlUnit PCControlFunction mux_2x1 ALU InstructionMemory InstMemory mux2x1 MUX2x1 MUX2x1_4Bits Control_Unit StackPointer next_instruction mux_4x1_32bits.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# AllProj.bde: 6 symbol(s) analyzed.
+# 0 symbol(s) fully converted.
+# 0 symbol(s) partially converted.
+# 6 symbol(s) not converted.
+# The conversion results have been written to the log file. Double click on this line to view the log.
+# AllProj.bde: 6 symbol(s) analyzed.
+# 0 symbol(s) fully converted.
+# 0 symbol(s) partially converted.
+# 6 symbol(s) not converted.
+# The conversion results have been written to the log file. Double click on this line to view the log.
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/RegistersFile.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Register_File.
+# $root top modules: alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC ControlUnit PCControlFunction mux_2x1 ALU InstructionMemory InstMemory mux2x1 MUX2x1 MUX2x1_4Bits Control_Unit StackPointer next_instruction mux_4x1_32bits Register_File.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/RegistersFile.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Register_File.
+# $root top modules: alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC ControlUnit PCControlFunction mux_2x1 ALU InstructionMemory InstMemory mux2x1 MUX2x1 MUX2x1_4Bits Control_Unit StackPointer next_instruction mux_4x1_32bits Register_File.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work ALU $dsn/src/RegistersFile.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Register_File.
+# $root top modules: alu_tb Extender DataMemory_tb ProgramCounter RegisterFile Before_PC ControlUnit PCControlFunction mux_2x1 ALU InstructionMemory InstMemory mux2x1 MUX2x1 MUX2x1_4Bits Control_Unit StackPointer next_instruction mux_4x1_32bits Register_File.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# AllProj.bde: 6 symbol(s) analyzed.
+# 0 symbol(s) fully converted.
+# 0 symbol(s) partially converted.
+# 6 symbol(s) not converted.
+# The conversion results have been written to the log file. Double click on this line to view the log.

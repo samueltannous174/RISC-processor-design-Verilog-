@@ -1,0 +1,15 @@
+i<>.\src\alu.v
+i<>.\src\Extender.v
+i<>.\src\Data_mem.v
+i<>.\src\PC.v
+i<>.\src\RegistersFile.v
+i<>.\src\before_PC.v
+i<>.\src\ControlUnit.v
+i<>.\src\PC_ControlUnit.v
+i<>.\src\Mux2x1.v
+i<>.\src\AllProj.bde
+i<>.\src\InstMem.v
+i<>.\src\Mux2x1_4Bits.v
+i<>.\src\stack_pointer.v
+i<>.\src\next_instruction.v
+i<>.\src\mux4x1.v
